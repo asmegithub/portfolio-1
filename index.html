@@ -9,9 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
 <style>
-:root{--bg:#f7f4ec;--surface:#fffdf7;--text:#1b1810;--muted:#6a6454;--line:#e6dfcb;--gold:#a87a10;--gold2:#d9a928;--soft:#f3e8c4;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c0b09;--surface:#16140f;--text:#f1ece0;--muted:#a39b87;--line:#2a2619;--gold:#e0b441;--gold2:#f6d77a;--soft:#2a2310;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0c0b09;--surface:#16140f;--text:#f1ece0;--muted:#a39b87;--line:#2a2619;--gold:#e0b441;--gold2:#f6d77a;--soft:#2a2310;color-scheme:dark}
+:root{--bg:#f7f4ec;--surface:#fffdf7;--text:#1b1810;--muted:#6a6454;--line:#e6dfcb;--gold:#8a6d2b;--gold2:#b69445;--soft:#f1ebdb;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c0b09;--surface:#16140f;--text:#f1ece0;--muted:#a39b87;--line:#2a2619;--gold:#bfa05a;--gold2:#d6bd86;--soft:#211d12;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0c0b09;--surface:#16140f;--text:#f1ece0;--muted:#a39b87;--line:#2a2619;--gold:#bfa05a;--gold2:#d6bd86;--soft:#211d12;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;background:var(--bg);color:var(--text);font:12px/1.75 "JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;overflow-x:hidden}
@@ -24,7 +24,7 @@ nav{display:flex;gap:22px;align-items:center;height:56px;font-size:11px;overflow
 nav b{margin-right:auto;font-size:12px;letter-spacing:.02em}nav b i{color:var(--gold);font-style:normal}
 nav a{color:var(--muted);transition:color .25s}nav a:hover{color:var(--gold)}
 .hero{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center;padding:70px 0 60px}
-.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.22;background:var(--gold2);z-index:-1;animation:drift 14s ease-in-out infinite alternate}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.09;background:var(--gold2);z-index:-1;animation:drift 14s ease-in-out infinite alternate}
 .b1{width:300px;height:300px;top:-40px;left:-80px}.b2{width:240px;height:240px;bottom:0;right:-60px;animation-delay:-6s}
 @keyframes drift{to{transform:translate(60px,40px) scale(1.2)}}
 .tag{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:4px 14px;border-radius:99px;font-size:10.5px;font-weight:600}
@@ -38,11 +38,11 @@ h1{font-size:clamp(27.5px,4.9vw,45.5px);line-height:1.08;margin:18px 0 14px;lett
 .btn.p{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1b1810;border-color:transparent}
 .photo{position:relative;justify-self:center;width:min(230px,62vw);aspect-ratio:4/5;animation:float 6s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-12px)}}
-.photo::before{content:"";position:absolute;inset:-10px;border-radius:26px;background:conic-gradient(from 0deg,var(--gold),transparent 30%,var(--gold2),transparent 70%,var(--gold));animation:spin 8s linear infinite;z-index:0}
+.photo::before{content:"";position:absolute;inset:-10px;border-radius:26px;background:conic-gradient(from 0deg,var(--gold),transparent 30%,var(--gold2),transparent 70%,var(--gold));animation:spin 8s linear infinite;z-index:0;opacity:.5}
 @keyframes spin{to{transform:rotate(360deg)}}
 .frame{position:absolute;inset:0;border-radius:20px;overflow:hidden;z-index:1;background:var(--bg);border:3px solid var(--bg)}
-.frame img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;filter:sepia(.55) saturate(1.25) contrast(1.05) brightness(.97)}
-.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(246,215,122,.28),rgba(168,122,16,.22) 60%,rgba(12,11,9,.35));mix-blend-mode:soft-light}
+.frame img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;filter:sepia(.28) saturate(1.05) contrast(1.05) brightness(.97)}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(214,189,134,.14),rgba(138,109,43,.12) 60%,rgba(12,11,9,.35));mix-blend-mode:soft-light}
 .pgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .proj{padding:0;overflow:hidden;display:flex;flex-direction:column}
 .pimg{aspect-ratio:16/10;overflow:hidden;position:relative;background:var(--soft)}
@@ -61,7 +61,7 @@ h1{font-size:clamp(27.5px,4.9vw,45.5px);line-height:1.08;margin:18px 0 14px;lett
 .tl::before{content:"";position:absolute;left:-31px;top:24px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--gold2);box-shadow:0 0 0 4px var(--soft);transition:background .3s}
 .tl:hover::before{background:var(--gold2)}
 .brand{display:flex;align-items:center;gap:10px}
-.logo{width:34px;height:34px;flex:none;filter:drop-shadow(0 4px 10px rgba(224,180,65,.35));transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.logo{width:34px;height:34px;flex:none;filter:drop-shadow(0 4px 10px rgba(191,160,90,.12));transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
 .brand:hover .logo,.foot .logo:hover{transform:rotate(-10deg) scale(1.12)}
 .logo.sm{width:26px;height:26px}
 .foot{display:flex;align-items:center;gap:12px}
@@ -178,8 +178,13 @@ var n=cn.value.trim(),e=ce.value.trim(),m=cm.value.trim(),st=document.getElement
 if(!n||!/^\S+@\S+\.\S+$/.test(e)||!m){st.textContent='Please add your name, a valid email and a message.';return}
 var subj='Portfolio inquiry: '+cs.value+' ('+n+')';
 var body=m+'\n\n— '+n+'\n'+e;
-var a=document.createElement('a');a.href='mailto:asmare.zelalem@aau.edu.et?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);a.target='_blank';document.body.appendChild(a);a.click();a.remove();
-st.textContent='Opening your email app with the message ready to send. If nothing opens, email asmare.zelalem@aau.edu.et directly.'});
+var to='asmare.zelalem@aau.edu.et',q=encodeURIComponent(subj),b=encodeURIComponent(body);
+var a=document.createElement('a');a.href='mailto:'+to+'?subject='+q+'&body='+b;a.target='_blank';document.body.appendChild(a);a.click();a.remove();
+st.textContent='Your email app should open with the message ready to send. Not opening? Send it with: ';
+[['Gmail','https://mail.google.com/mail/?view=cm&fs=1&to='+to+'&su='+q+'&body='+b],['Outlook','https://outlook.office.com/mail/deeplink/compose?to='+to+'&subject='+q+'&body='+b]].forEach(function(x){var l=document.createElement('a');l.href=x[1];l.target='_blank';l.rel='noopener';l.textContent=x[0];st.append(l,' · ')});
+var c=document.createElement('a');c.href='#';c.textContent='Copy message';
+c.onclick=function(e){e.preventDefault();var t='To: '+to+'\nSubject: '+subj+'\n\n'+body;try{navigator.clipboard.writeText(t).then(function(){c.textContent='Copied ✓'},function(){c.textContent='Copy failed'})}catch(x){c.textContent='Copy failed'}};
+st.append(c);});
 var bar=document.getElementById('bar');
 addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
 </script>
