@@ -14,29 +14,29 @@
 :root[data-theme="dark"]{--bg:#0c0b09;--surface:#16140f;--text:#f1ece0;--muted:#a39b87;--line:#2a2619;--gold:#e0b441;--gold2:#f6d77a;--soft:#2a2310;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{margin:0;background:var(--bg);color:var(--text);font:15px/1.75 "JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);font:12px/1.75 "JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;overflow-x:hidden}
 h1,h2,h3,nav,.tag,.meta,.btn,.chips,input,select,textarea,button{font-family:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 a{color:var(--gold);text-decoration:none}
 .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
 .bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));z-index:20}
 header{position:sticky;top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:10}
-nav{display:flex;gap:22px;align-items:center;height:56px;font-size:14px;overflow-x:auto;white-space:nowrap}
-nav b{margin-right:auto;font-size:15px;letter-spacing:.02em}nav b i{color:var(--gold);font-style:normal}
+nav{display:flex;gap:22px;align-items:center;height:56px;font-size:11px;overflow-x:auto;white-space:nowrap}
+nav b{margin-right:auto;font-size:12px;letter-spacing:.02em}nav b i{color:var(--gold);font-style:normal}
 nav a{color:var(--muted);transition:color .25s}nav a:hover{color:var(--gold)}
 .hero{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center;padding:70px 0 60px}
 .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.22;background:var(--gold2);z-index:-1;animation:drift 14s ease-in-out infinite alternate}
 .b1{width:300px;height:300px;top:-40px;left:-80px}.b2{width:240px;height:240px;bottom:0;right:-60px;animation-delay:-6s}
 @keyframes drift{to{transform:translate(60px,40px) scale(1.2)}}
-.tag{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:4px 14px;border-radius:99px;font-size:13px;font-weight:600}
-h1{font-size:clamp(34px,6vw,56px);line-height:1.08;margin:18px 0 14px;letter-spacing:-.02em}
+.tag{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:4px 14px;border-radius:99px;font-size:10.5px;font-weight:600}
+h1{font-size:clamp(27.5px,4.9vw,45.5px);line-height:1.08;margin:18px 0 14px;letter-spacing:-.02em}
 .gold{background:linear-gradient(100deg,var(--gold),var(--gold2),var(--gold));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
 @keyframes shine{to{background-position:200% center}}
-.hero p{font-size:18px;color:var(--muted);margin:0 0 26px}
+.hero p{font-size:14.5px;color:var(--muted);margin:0 0 26px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--gold);transition:transform .25s,box-shadow .25s}
+.btn{padding:12px 22px;border-radius:10px;font-weight:600;font-size:12px;border:1px solid var(--gold);transition:transform .25s,box-shadow .25s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px -10px var(--gold)}
 .btn.p{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1b1810;border-color:transparent}
-.photo{position:relative;justify-self:center;width:min(300px,78vw);aspect-ratio:4/5;animation:float 6s ease-in-out infinite}
+.photo{position:relative;justify-self:center;width:min(230px,62vw);aspect-ratio:4/5;animation:float 6s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-12px)}}
 .photo::before{content:"";position:absolute;inset:-10px;border-radius:26px;background:conic-gradient(from 0deg,var(--gold),transparent 30%,var(--gold2),transparent 70%,var(--gold));animation:spin 8s linear infinite;z-index:0}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -51,7 +51,7 @@ h1{font-size:clamp(34px,6vw,56px);line-height:1.08;margin:18px 0 14px;letter-spa
 .proj:hover .pimg img,.proj:hover .pimg svg{transform:scale(1.06)}
 .pbody{padding:20px 24px 8px;flex:1}
 .stack{padding:12px 24px 18px;border-top:1px solid var(--line)}
-.stack b{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.stack b{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500}
 .stack .chips{margin-top:8px}
 @media (max-width:760px){.pgrid{grid-template-columns:1fr}}
 .timeline{position:relative;padding-left:34px}
@@ -66,40 +66,40 @@ h1{font-size:clamp(34px,6vw,56px);line-height:1.08;margin:18px 0 14px;letter-spa
 .logo.sm{width:26px;height:26px}
 .foot{display:flex;align-items:center;gap:12px}
 .pcol{justify-self:center;display:flex;flex-direction:column;align-items:center;gap:30px}
-.roles{width:min(340px,86vw);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.roles{width:min(290px,80vw);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
 .roles ul{display:flex;width:max-content;margin:0;padding:0;list-style:none;animation:slide 20s linear infinite}
 .roles:hover ul{animation-play-state:paused}
-.roles li{line-height:40px;font:600 13px "JetBrains Mono",ui-monospace,monospace;letter-spacing:.03em;color:var(--gold);white-space:nowrap}
-.roles li::after{content:"\25C6";margin:0 22px;font-size:8px;vertical-align:middle;opacity:.8}
+.roles li{line-height:36px;font:600 13px "JetBrains Mono",ui-monospace,monospace;letter-spacing:.03em;color:var(--gold);white-space:nowrap}
+.roles li::after{content:"\25C6";margin:0 18px;font-size:5.5px;vertical-align:middle;opacity:.8}
 @keyframes slide{to{transform:translateX(-50%)}}
 section{padding:50px 0;border-top:1px solid var(--line)}
-h2{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 26px;display:flex;align-items:center;gap:14px}
+h2{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 26px;display:flex;align-items:center;gap:14px}
 h2::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,var(--gold),transparent)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px;transition:transform .3s,border-color .3s,box-shadow .3s}
 .card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 16px 34px -18px var(--gold)}
-.card h3{margin:0 0 2px;font-size:18px}
-.meta{color:var(--gold);font-size:13px;margin-bottom:8px}
-.card p{margin:0;color:var(--muted);font-size:15.5px}
+.card h3{margin:0 0 2px;font-size:14.5px}
+.meta{color:var(--gold);font-size:10.5px;margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:12.5px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
 .grid .card{margin:0}
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-.chips span{font-size:12.5px;background:var(--soft);color:var(--gold);padding:3px 11px;border-radius:99px;transition:transform .2s}
+.chips span{font-size:10px;background:var(--soft);color:var(--gold);padding:3px 11px;border-radius:99px;transition:transform .2s}
 .chips span:hover{transform:scale(1.08)}
-.skill h3{font-size:15px;margin:0}
+.skill h3{font-size:12px;margin:0}
 .reveal{opacity:1}
 .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
 .js .reveal.in{opacity:1;transform:none}
 .form{display:grid;gap:14px;margin:6px 0 30px;padding:24px;background:var(--surface);border:1px solid var(--line);border-radius:16px;transition:border-color .3s,box-shadow .3s}
 .form:focus-within{border-color:var(--gold);box-shadow:0 18px 40px -24px var(--gold)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.form label{display:grid;gap:6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
-.form input,.form select,.form textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:14px;outline:none;transition:border-color .25s,box-shadow .25s}
+.form label{display:grid;gap:6px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.form input,.form select,.form textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:11px;outline:none;transition:border-color .25s,box-shadow .25s}
 .form input:focus,.form select:focus,.form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--soft)}
 .form textarea{min-height:130px;resize:vertical}
-.form button{cursor:pointer;justify-self:start;font-size:15px}
-.status{font-size:13px;color:var(--muted);min-height:1.2em}
+.form button{cursor:pointer;justify-self:start;font-size:12px}
+.status{font-size:10.5px;color:var(--muted);min-height:1.2em}
 @media (max-width:560px){.row{grid-template-columns:1fr}}
-footer{padding:40px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{padding:40px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:10.5px}
 @media (max-width:720px){.hero{grid-template-columns:1fr;padding-top:40px}.pcol{order:-1}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
 </style>
@@ -163,7 +163,7 @@ footer{padding:40px 0 50px;border-top:1px solid var(--line);color:var(--muted);f
 <button class="btn p" type="submit">Send message →</button>
 <div class="status" id="cst" aria-live="polite"></div>
 </form>
-<p style="font-size:13px">Or reach me directly:</p>
+<p style="font-size:11px">Or reach me directly:</p>
 <div class="btns"><a class="btn p" href="mailto:asmare.zelalem@aau.edu.et">asmare.zelalem@aau.edu.et</a><a class="btn" href="tel:+251966314151">+251 966 314 151</a><a class="btn" href="https://www.linkedin.com/in/asmare21aau/" target="_blank" rel="noopener">LinkedIn</a></div>
 </section>
 </main>
